@@ -88,6 +88,23 @@ public class BankingSystem {
         System.out.println("Remaining Balance: " + balance);
     }
 
+    public static void deposit() throws Exception {
+
+        System.out.print("Enter Deposit Amount: ");
+        double damt = sc.nextDouble();
+
+        if (damt <= 0) {
+            throw new InvalidAmountException("Amount must be positive");
+        }
+
+        System.out.print("Enter Current Balance: ");
+        double balance = sc.nextDouble();
+
+        balance = balance + damt;
+
+        System.out.println("Updated Balance: " + balance);
+    }
+
     public static void main(String[] args) {
 
         int choice;
@@ -95,7 +112,8 @@ public class BankingSystem {
         do {
             System.out.println("\n1. Create Account");
             System.out.println("2. Withdraw");
-            System.out.println("3. Exit");
+            System.out.println("3. Deposit");
+            System.out.println("4. Exit");
             System.out.print("Enter Choice: ");
 
             choice = sc.nextInt();
@@ -111,6 +129,10 @@ public class BankingSystem {
                         break;
 
                     case 3:
+                        deposit();
+                        break;
+
+                    case 4:
                         System.out.println("Exiting...");
                         break;
 
@@ -121,6 +143,6 @@ public class BankingSystem {
                 System.out.println("Error: " + e.getMessage());
             }
 
-        } while (choice != 3);
+        } while (choice != 4);
     }
 }
