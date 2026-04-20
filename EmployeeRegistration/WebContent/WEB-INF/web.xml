@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>EmployeeRegistration</display-name>
+
+    <!-- ── Welcome page ─────────────────────────────────────── -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  NOTE: Servlet mappings are handled via @WebServlet          ║
+    ║  annotations on each servlet class.                          ║
+    ║                                                              ║
+    ║  Servlets mapped:                                            ║
+    ║    /registerEmployee  → EmployeeServlet                      ║
+    ║    /listEmployees     → ListEmployeeServlet                  ║
+    ║    /deleteEmployee    → DeleteEmployeeServlet                 ║
+    ║                                                              ║
+    ║  If you are NOT using annotations (older containers),        ║
+    ║  uncomment the blocks below.                                 ║
+    ╚══════════════════════════════════════════════════════════════╝
+
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>com.employee.servlet.EmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/registerEmployee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListEmployeeServlet</servlet-name>
+        <servlet-class>com.employee.servlet.ListEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListEmployeeServlet</servlet-name>
+        <url-pattern>/listEmployees</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteEmployeeServlet</servlet-name>
+        <servlet-class>com.employee.servlet.DeleteEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteEmployeeServlet</servlet-name>
+        <url-pattern>/deleteEmployee</url-pattern>
+    </servlet-mapping>
+    -->
+
+</web-app>
