@@ -24,7 +24,7 @@ public class DBConnection {
     private static final String DB_URL   = "jdbc:mysql://localhost:3306/employee_db"
                                          + "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     private static final String DB_USER  = "root";
-    private static final String DB_PASS  = "your_password";   // ← CHANGE THIS
+    private static final String DB_PASS  = "Anjani";   
 
     // Prevent instantiation
     private DBConnection() {}
